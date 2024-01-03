@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <!-- og -->
   <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/sol_favicon.png">
   <!-- 노이즈 효과 -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <!-- 구글 아이콘 -->
@@ -12,19 +13,25 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <!-- font -->
   <link href="https://webfontworld.github.io/sunn/SUIT.css" rel="stylesheet">
+  <!-- css -->
+  <!-- jQuary -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./aos.css">
   <!-- reset -->
   <link rel="stylesheet" href="./reset.css">
+  <!-- style -->
   <link rel="stylesheet" href="./index.css">
   <title>포트폴리오</title>
 </head>
 
-<body>
+<body id="target-element">
+  <div id="cursor"></div>
   <header class="header">
     <div class="header_wrap">
-      <div class="nav_icon">
-        <span class="navbar"></span>
-        <img src="./assets/images/clobar.svg" alt="클로버">
-      </div>
+      <h1 class="logo">
+        <!-- <span class="navbar"></span> -->
+        <img src="./favicon/sol_favicon.png" alt="클로버">
+      </h1>
       <!-- <h1 class="page_title">sol'</h1> -->
       <nav class="global_nav">
         <menu class="menu">
@@ -40,118 +47,144 @@
   </header>
   <!-- sol_intro 페이지-->
   <section class="sol" id="sol">
-    <div class="sol_titleWrap flex color">
-      <h2 class="sol_title">
-        <span class="sol_left">hi, hello 안녕하세요!</span><br>
-        아낌없이 무럭무럭 <strong class="bold">자라나는,</strong><br>
-        <strong class="bold">꿋꿋한</strong> 웹 퍼블리셔 <strong class="bold">꿈나무</strong>
-      </h2>
-      <h2 class="sol_title">
-        <strong class="bold name">jeong hasol</strong> 입니다
-      </h2>
+    <div class="sub_titleWrap flex color">
+      <p class="sub_title title_left">hi, hello 안녕하세요!
+      </p>
+      <p class="sub_title title_right">
+        아낌없이 꿋꿋하게 성장하는<br>
+        웹 디자이너이자 퍼블리셔 꿈나무,<br>
+        Jeong Hasol 입니다.
+      </p>
     </div>
     <div class="sol_imgWrap">
-      <img src="./assets/images/intro_tree.svg" alt="나무" class="sol_tree">
       <img src="./assets/images/intro_star.svg" alt="반짝">
       <img src="./assets/images/intro_star.svg" alt="반짝">
       <img src="./assets/images/intro_star.svg" alt="반짝">
       <img src="./assets/images/intro_star.svg" alt="반짝">
     </div>
+    <!-- <h2 class="sol_title color_change" id="sol_title">PORTFOLIO</h2> -->
+    <h2 class="sol_title color" id="sol_title">PORTFOLIO</h2>
+
   </section>
   <!-- 소개 페이지 -->
   <section class="about" id="about">
-    <img src="./assets/images/about_cloud.png" alt="구름" class="about_cloud">
-    <div class="about_content">
-      <h3 class="about_title color">Who i am</h3>
-      <div class="about_txt">
-        <div class="about_tag color">
-          #느려도 꿋꿋하게 #언제나 차분하게<br>
-          #피할 수 없으면 즐기자 # 그냥하자
+    <div data-aos="fade-up" data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-anchor-placement="center-center"
+      class="ani">
+      <img src="./assets/images/about_cloud.svg" alt="구름" class="about_cloud">
+    </div>
+    <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-out" data-aos-delay="500">
+      <div class="about_content">
+        <h3 class="about_title color">Who i am</h3>
+        <div class="about_txt">
+          <ul class="about_tag color">
+            <li>#느려도 꿋꿋하게</li>
+            <li>#언제나 차분하게</li>
+            <li>#피할 수 없으면 즐기자</li>
+            <li>#그냥하자</li>
+          </ul>
+          <ul class="about_me">
+            <li>디자인에 진심인 시각디자인 전공자</li>
+            <li>플러스, 코딩도 즐길 줄 아는 웹 퍼블리셔 꿈나무</li>
+            <li>다시 시작한 디자인과 새롭게 도전한 코딩, 두 마리 토끼를 모두 잡자!</li>
+          </ul>
         </div>
-        <ul class="about_me">
-          <li>디자인에 진심인 시각디자인 전공자</li>
-          <li>플러스, 코딩도 즐길 줄 아는 웹 퍼블리셔 꿈나무</li>
-          <li>다시 시작한 디자인과 새롭게 도전한 코딩, 두 마리 토끼를 모두 잡자!</li>
-        </ul>
       </div>
     </div>
-    <img src="./assets/images/rabbitLeft.png" alt="두  마리 토끼왼" class="rabbit_L rabbit">
-    <img src="./assets/images/rabbitRight.png" alt="두  마리 토끼오" class="rabbit_R rabbit">
+    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="50" data-aos-easing="ease-in-out"
+      class="ani rabbit">
+      <img src="./assets/images/rabbitLeft.png" alt="두  마리 토끼왼" class="rabbit_L rabbit">
+      <img src="./assets/images/rabbitRight.png" alt="두  마리 토끼오" class="rabbit_R rabbit">
+    </div>
   </section>
   <!-- 기술 페이지 -->
   <section class="skills" id="skills">
-    <ul class="skills_grid">
-      <li class="skill html">
-        <h4 class="title">HTML5 & CSS3</h4>
-        <ul class="skill_list">
-          <li>웹 표준과 웹 접근성을 고려한 시맨틱 태그</li>
-          <li>Flex / Grid / Position으로 레이아웃 구현</li>
-          <li>keyframes과 animation을 통한 이벤트와 마우스 이벤트 구현</li>
-          <li>미디어쿼리를 활용한 반응형 웹</li>
-        </ul>
-      </li>
-      <li class="skill skills_js">
-        <h4 class="title">JavaScript & jQeury</h4>
-        <ul class="skill_list">
-          <li>ES6+ 문법 이해</li>
-          <li>DOM / BOM</li>
-          <li>변수 및 함수의 유효 범위, 호이스팅, event.target 등의 실행 컨텍스트 이해</li>
-          <li>효율적인 웹페이지 동작을 위한 비동기 처리 이해 및 활용</li>
-        </ul>
-      </li>
-      <li class="skill skills_tools">
-        <h4 class="title">tools</h4>
-        <ul class="skill_list">
-          <li>VScode</li>
-          <li>Figma를 이용하여 프로토타입 제작</li>
-          <li>Adobe ilustrator / Photoshop을 통한 UI 디자인 제작</li>
-          <li>그 외 가능한 tool: Adobe indesign</li>
-        </ul>
-      </li>
-      <li class="skill skills_git">
-        <h4 class="title">git & gitHub</h4>
-        <ul class="skill_list">
-          <li>Git을 통한 코드 버전 관리</li>
-          <li>GitHub-Pages를 이용한 배포</li>
-          <li>GitHub Organizations을 통한 현업 가능</li>
-        </ul>
-      </li>
-      <li class="skill skills_react">
-        <h4 class="title flex">react</h4>
-        <ul class="skill_list">
-          <li>React-Router-Dom</li>
-          <li>유연한 Hook 사용</li>
-          <li>Axios를 이용한 외부 API 및 백엔드와 통신</li>
-          <li>css-modules, Styled-Component, Bootstrap</li>
-        </ul>
-      </li>
-      <li class="skill skills_back">
-        <h4 class="title">Node.js & back</h4>
-        <ul class="skill_list">
-          <li>Express 프레임워크를 이용한 서버 구축 및 API를 통한 클라이언트와의 데이터 통신</li>
-          <li>다양한 Express의 미들웨어 활용: express-session, cors, static, json 등</li>
-          <li>데이터 보안을 위한 SHA256 해시 함수 사용</li>
-          <li>MongoDB를 통한 데이터베이스 연결</li>
-          <li>cloudtype으로 배포</li>
-        </ul>
-      </li>
-    </ul>
+    <div data-aos="fade-up" data-aos-duration="3000">
+      <ul class="skills_grid">
+        <li class="skill html">
+          <h4 class="title">HTML5 & CSS3</h4>
+          <ul class="skill_list">
+            <li>웹 표준과 웹 접근성을 고려한 시맨틱 태그</li>
+            <li>Flex / Grid / Position으로 레이아웃 구현</li>
+            <li>keyframes과 animation을 통한 이벤트와 마우스 이벤트 구현</li>
+            <li>미디어쿼리를 활용한 반응형 웹</li>
+          </ul>
+        </li>
+        <li class="skill skills_js">
+          <h4 class="title">JavaScript & jQeury</h4>
+          <ul class="skill_list">
+            <li>ES6+ 문법 이해</li>
+            <li>DOM / BOM</li>
+            <li>변수 및 함수의 유효 범위, 호이스팅, event.target 등의 실행 컨텍스트 이해</li>
+            <li>효율적인 웹페이지 동작을 위한 비동기 처리 이해 및 활용</li>
+          </ul>
+        </li>
+        <li class="skill skills_tools">
+          <h4 class="title">tools</h4>
+          <ul class="skill_list">
+            <li>VScode</li>
+            <li>Figma를 이용하여 프로토타입 제작</li>
+            <li>Adobe ilustrator / Photoshop을 통한 UI 디자인 제작</li>
+            <li>그 외 가능한 tool: Adobe indesign</li>
+          </ul>
+        </li>
+        <li class="skill skills_git">
+          <h4 class="title">git & gitHub</h4>
+          <ul class="skill_list">
+            <li>Git을 통한 코드 버전 관리</li>
+            <li>GitHub-Pages를 이용한 배포</li>
+            <li>GitHub Organizations을 통한 현업 가능</li>
+          </ul>
+        </li>
+        <li class="skill skills_react">
+          <h4 class="title flex">react</h4>
+          <ul class="skill_list">
+            <li>React-Router-Dom</li>
+            <li>유연한 Hook 사용</li>
+            <li>Axios를 이용한 외부 API 및 백엔드와 통신</li>
+            <li>css-modules, Styled-Component, Bootstrap</li>
+          </ul>
+        </li>
+        <li class="skill skills_back">
+          <h4 class="title">Node.js & back</h4>
+          <ul class="skill_list">
+            <li>Express 프레임워크를 이용한 서버 구축 및 API를 통한 클라이언트와의 데이터 통신</li>
+            <li>다양한 Express의 미들웨어 활용: express-session, cors, static, json 등</li>
+            <li>데이터 보안을 위한 SHA256 해시 함수 사용</li>
+            <li>MongoDB를 통한 데이터베이스 연결</li>
+            <li>cloudtype으로 배포</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </section>
   <!-- 프로젝트 소개 -->
   <section class="projects" id="projects">
     <div class="projects_intro">
       <div class="projects_tree">
-        <img src="./assets/images/projects_tree.svg" alt="열매 나무" class="tree">
+        <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-in-out"
+          class="tree_aos">
+          <img src="./assets/images/projects_tree.svg" alt="열매 나무" class="tree">
+        </div>
         <div>
-          <img src="./assets/images/projects_apple1.svg" alt="사과1" class="apple1">
-          <img src="./assets/images/projects_apple1.svg" alt="사과2" class="apple2">
-          <img src="./assets/images/projects_cherrysvg.svg" alt="체리" class="cherry">
+          <div data-aos="zoom-in-up" data-aos-delay="1200" class="apple1">
+            <img src="./assets/images/projects_apple1.svg" alt="사과1">
+          </div>
+          <div data-aos="zoom-in-up" data-aos-delay="1300" class="apple2">
+            <img src="./assets/images/projects_apple1.svg" alt="사과2">
+          </div>
+          <div data-aos="zoom-in-up" data-aos-delay="1400" class="cherry">
+            <img src="./assets/images/projects_cherrysvg.svg" alt="체리">
+          </div>
         </div>
       </div>
-      <h3 class="title">Welcome to, my work.</h3>
+      <div data-aos="zoom-in-down" data-aos-delay="1500" class="title_aos">
+        <h3 class="title">
+          Welcome to, my work.
+        </h3>
+      </div>
       <div class="projects_stars">
-        <img src="./assets/images/intro_star.svg" alt="반짝" class="star1">
-        <img src="./assets/images/intro_star.svg" alt="반짝" class="star2">
+        <img src="./assets/images/projects_star.svg" alt="반짝" class="star1">
+        <img src="./assets/images/projects_star.svg" alt="반짝" class="star2">
       </div>
     </div>
     <!-- 프로젝트 소개 -->
@@ -230,19 +263,27 @@
       </div>
     </div>
     <div class="address flex">
-      <a href="#">wjdgkthf35@naver.com</a>
+      wjdgkthf35@naver.com
       <a href="#">Instagram</a>
     </div>
   </section>
   <!-- 푸터 -->
   <footer class="footer">
-    <a href="#" class="top_btn">
+    <a href="#sol" class="top_btn">
       <span class="material-symbols-outlined">
         arrow_upward
       </span>
   </footer>
   <div class="noise"></div>
 
+
+  <!-- jQuary -->
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script>
+    AOS.init(); 
+  </script>
   <!-- gsap 플러그인 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
     integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="

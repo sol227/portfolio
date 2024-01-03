@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Text Color Change</title>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+      /* 배경색 전환에 애니메이션 적용 */
+    }
+
+    .content {
+      color: white;
+      /* 기본 텍스트 색상 */
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <h1>Hello, Dynamic Color!</h1>
+    <p>This is some content.</p>
+  </div>
+
+  <script>
+    // 배경색이 변경될 때 호출되는 함수
+    function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
+
+      // 배경색에 따라 텍스트 색상을 동적으로 조절
+      const textColor = getTextColorForBackground(color);
+      document.querySelector('.content').style.color = textColor;
+    }
+
+    // 배경색에 따라 텍스트 색상을 계산하는 함수
+    function getTextColorForBackground(backgroundColor) {
+      // 여기에서 원하는 로직에 따라 텍스트 색상을 계산하거나 지정할 수 있습니다.
+      // 예를 들면 어두운 배경에는 밝은 텍스트, 밝은 배경에는 어두운 텍스트 등을 선택할 수 있습니다.
+
+      // 간단한 예제: 배경색이 밝을 때는 검은색, 어두울 때는 흰색
+      const brightness = getBrightness(backgroundColor);
+      return brightness > 128 ? 'black' : 'white';
+    }
+
+    // 색상의 밝기를 계산하는 함수
+    function getBrightness(color) {
+      // 여기에서 색상의 밝기를 계산하는 로직을 추가할 수 있습니다.
+      // 예를 들면 RGB 값의 평균이나 다른 알고리즘을 사용할 수 있습니다.
+      // 아래는 간단한 예제로 RGB 값의 평균을 사용합니다.
+
+      const [r, g, b] = color.match(/\d+/g).map(Number);
+      return (r + g + b) / 3;
+    }
+
+    // 예제: 배경색이 5초마다 랜덤으로 변경됩니다.
+    setInterval(function () {
+      const randomColor = getRandomColor();
+      changeBackgroundColor(randomColor);
+    }, 5000);
+
+    // 랜덤한 RGB 색상을 생성하는 함수
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+
+</body>
+
+</html>

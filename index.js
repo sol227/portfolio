@@ -24,13 +24,65 @@ function scrollToHash(hash, e) {
     gsap.to(window, { scrollTo: elem }); // gsap을 사용하여 부드러운 스크롤 효과 적용
   }
 }
-
 // 링크 클릭 시 현재 페이지 내의 앵커로 스크롤 이동
 document.querySelectorAll("a[href]").forEach((a) => {
   a.addEventListener("click", (e) => {
     scrollToHash(getSamePageAnchor(a), e);
   });
 });
-
 // 로드 시 URL의 해시(앵커)로 스크롤 이동
 scrollToHash(window.location.hash);
+
+// sol_intro 색칠
+const intro = document.querySelector(".sol");
+const canvas = document.createElement("canvas");
+intro.appendChild(canvas);
+const ctx = canvas.getContext("2d");
+const colorChangeTitle = document.getElementById(".sol_title");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// 현재 위치
+let currentX = window.innerWidth / 2;
+let currentY = window.innerHeight / 2;
+
+intro.addEventListener("mousemove", (event) => {
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  // 캔버스에 부드럽게 이동하는 애니메이션 적용
+  requestAnimationFrame(() => {
+    animate(mouseX, mouseY);
+  });
+});
+
+function animate(mouseX, mouseY) {
+  // 새로운 위치로의 부드러운 이동 계산
+  currentX += (mouseX - currentX) * 0.3;
+  currentY += (mouseY - currentY) * 0.3;
+  const color = "#31af57";
+
+  // 캔버스에 부드럽게 이동한 위치에 원을 그림
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(currentX, currentY, 150, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+// 마우스 커서
+// const newCursor = document.getElementById("cursor");
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   document.addEventListener("mousemove", (e) => {
+//     const { clientX, clientY } = e;
+//     newCursor.style.left = clientX + "px";
+//     newCursor.style.top = clientY + "px";
+//   });
+
+//   document.addEventListener("scroll", () => {
+//     const rect = newCursor.getBoundingClientRect();
+//     newCursor.style.left = rect.left + window.scrollX + "px";
+//     newCursor.style.top = rect.top + window.scrollY + "px";
+//   });
+// });
