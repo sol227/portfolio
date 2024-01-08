@@ -21,16 +21,15 @@
   <link rel="stylesheet" href="./reset.css">
   <!-- style -->
   <link rel="stylesheet" href="./index.css">
-  <title>포트폴리오</title>
+  <title>sol' portfolio</title>
 </head>
 
 <body id="target-element">
-  <div id="cursor"></div>
   <header class="header">
     <div class="header_wrap">
       <h1 class="logo">
         <!-- <span class="navbar"></span> -->
-        <img src="./favicon/sol_favicon.png" alt="클로버">
+        <a href="#"><img src="./favicon/sol_favicon.png" alt="클로버"></a>
       </h1>
       <!-- <h1 class="page_title">sol'</h1> -->
       <nav class="global_nav">
@@ -43,17 +42,16 @@
         </menu>
       </nav>
     </div>
-
   </header>
   <!-- sol_intro 페이지-->
   <section class="sol" id="sol">
     <div class="sub_titleWrap flex color">
-      <p class="sub_title title_left">hi, hello 안녕하세요!
+      <p class="sub_title title_left">hi, hello 안녕하세요:)
       </p>
       <p class="sub_title title_right">
         아낌없이 꿋꿋하게 성장하는<br>
         웹 디자이너이자 퍼블리셔 꿈나무,<br>
-        Jeong Hasol 입니다.
+        'Jeong Hasol'입니다!
       </p>
     </div>
     <div class="sol_imgWrap">
@@ -63,8 +61,10 @@
       <img src="./assets/images/intro_star.svg" alt="반짝">
     </div>
     <!-- <h2 class="sol_title color_change" id="sol_title">PORTFOLIO</h2> -->
-    <h2 class="sol_title color" id="sol_title">PORTFOLIO</h2>
-
+    <div class="titleColor">
+      <h2 class="sol_title color" id="sol_title">PORTFOLIO</h2>
+    </div>
+    <svg id="drawingArea" width="100%" height="100%"></svg>
   </section>
   <!-- 소개 페이지 -->
   <section class="about" id="about">
@@ -90,7 +90,7 @@
         </div>
       </div>
     </div>
-    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="50" data-aos-easing="ease-in-out"
+    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="25" data-aos-easing="ease-in-out"
       class="ani rabbit">
       <img src="./assets/images/rabbitLeft.png" alt="두  마리 토끼왼" class="rabbit_L rabbit">
       <img src="./assets/images/rabbitRight.png" alt="두  마리 토끼오" class="rabbit_R rabbit">
@@ -98,37 +98,41 @@
   </section>
   <!-- 기술 페이지 -->
   <section class="skills" id="skills">
-    <div data-aos="fade-up" data-aos-duration="3000">
+    <div data-aos="fade-up" data-aos-duration="500">
       <ul class="skills_grid">
         <li class="skill html">
           <h4 class="title">HTML5 & CSS3</h4>
           <ul class="skill_list">
             <li>웹 표준과 웹 접근성을 고려한 시맨틱 태그</li>
-            <li>Flex / Grid / Position으로 레이아웃 구현</li>
-            <li>keyframes과 animation을 통한 이벤트와 마우스 이벤트 구현</li>
+            <li>Flex / Grid / Position으로 레이아웃 구축</li>
+            <li>@keyframe을 활용한 animation 제어</li>
+            <li>Canvas을 활용하여 웹에 2D 그래픽 구현</li>
             <li>미디어쿼리를 활용한 반응형 웹</li>
+
           </ul>
         </li>
         <li class="skill skills_js">
-          <h4 class="title">JavaScript & jQeury</h4>
+          <h4 class="title">JavaScript & JQeury</h4>
           <ul class="skill_list">
             <li>ES6+ 문법 이해</li>
-            <li>DOM / BOM</li>
-            <li>변수 및 함수의 유효 범위, 호이스팅, event.target 등의 실행 컨텍스트 이해</li>
-            <li>효율적인 웹페이지 동작을 위한 비동기 처리 이해 및 활용</li>
+            <li>다양한 메서드로 DOM 제어</li>
+            <li>Callback / Promise / Async Await 함수를 활용한 비동기 실행</li>
+            <li>Map과 ForEach를 활용해 반복되는 코드 단축</li>
+            <li>JQeury로 동적인 이벤트 정의</li>
+            <li>GSAP를 활용한 다양한 스크롤 이벤트 구현</li>
           </ul>
         </li>
         <li class="skill skills_tools">
-          <h4 class="title">tools</h4>
+          <h4 class="title">UI Design</h4>
           <ul class="skill_list">
-            <li>VScode</li>
             <li>Figma를 이용하여 프로토타입 제작</li>
-            <li>Adobe ilustrator / Photoshop을 통한 UI 디자인 제작</li>
-            <li>그 외 가능한 tool: Adobe indesign</li>
+            <li>Adobe Ilustrator을 통한 디자인 시안 및 이미지 소스 제작</li>
+            <li>SVG를 사용하여 이미지의 질 향상과 업무 효율을 높임</li>
+            <li>그 외 가능한 Design tool:<br> Adobe Photoshop / Indesign(편집) / Premiere Pro(영상) / Fresco(일러스트)</li>
           </ul>
         </li>
         <li class="skill skills_git">
-          <h4 class="title">git & gitHub</h4>
+          <h4 class="title">Git & GitHub</h4>
           <ul class="skill_list">
             <li>Git을 통한 코드 버전 관리</li>
             <li>GitHub-Pages를 이용한 배포</li>
@@ -136,22 +140,23 @@
           </ul>
         </li>
         <li class="skill skills_react">
-          <h4 class="title flex">react</h4>
+          <h4 class="title flex">React</h4>
           <ul class="skill_list">
-            <li>React-Router-Dom</li>
-            <li>유연한 Hook 사용</li>
-            <li>Axios를 이용한 외부 API 및 백엔드와 통신</li>
-            <li>css-modules, Styled-Component, Bootstrap</li>
+            <li>React-router-dom을 활용한 단일 웹페이지 제작</li>
+            <li>React Hook useState / useEffect으로 상태 관리</li>
+            <li>Fetch API, axios로 외부 데이터 통신</li>
+            <li>이벤트 핸들러로 동적인 이벤트 처리</li>
+            <li>CSS / SCSS / Styled-Component / Bootstrap</li>
+            <li>build 폴더를 GitHub로 직접 deploy</li>
           </ul>
         </li>
         <li class="skill skills_back">
-          <h4 class="title">Node.js & back</h4>
+          <h4 class="title">Node.js & Back</h4>
           <ul class="skill_list">
-            <li>Express 프레임워크를 이용한 서버 구축 및 API를 통한 클라이언트와의 데이터 통신</li>
-            <li>다양한 Express의 미들웨어 활용: express-session, cors, static, json 등</li>
-            <li>데이터 보안을 위한 SHA256 해시 함수 사용</li>
+            <li>Node.js Express 프레임워크 서버와 React 연결</li>
+            <li>데이터 보안을 위해 SHA256 해시 함수 사용</li>
             <li>MongoDB를 통한 데이터베이스 연결</li>
-            <li>cloudtype으로 배포</li>
+            <li>Cloudtype을 이용한 배포</li>
           </ul>
         </li>
       </ul>
@@ -166,76 +171,87 @@
           <img src="./assets/images/projects_tree.svg" alt="열매 나무" class="tree">
         </div>
         <div>
-          <div data-aos="zoom-in-up" data-aos-delay="1200" class="apple1">
+          <div data-aos="zoom-in-up" data-aos-delay="300" class="apple1">
             <img src="./assets/images/projects_apple1.svg" alt="사과1">
           </div>
-          <div data-aos="zoom-in-up" data-aos-delay="1300" class="apple2">
+          <div data-aos="zoom-in-up" data-aos-delay="400" class="apple2">
             <img src="./assets/images/projects_apple1.svg" alt="사과2">
           </div>
-          <div data-aos="zoom-in-up" data-aos-delay="1400" class="cherry">
+          <div data-aos="zoom-in-up" data-aos-delay="500" class="cherry">
             <img src="./assets/images/projects_cherrysvg.svg" alt="체리">
           </div>
         </div>
       </div>
-      <div data-aos="zoom-in-down" data-aos-delay="1500" class="title_aos">
+      <div data-aos="zoom-in-down" data-aos-delay="700" class="title_aos">
         <h3 class="title">
           Welcome to, my work.
         </h3>
       </div>
       <div class="projects_stars">
-        <img src="./assets/images/projects_star.svg" alt="반짝" class="star1">
-        <img src="./assets/images/projects_star.svg" alt="반짝" class="star2">
+        <div data-aos="fade-up" data-aos-delay="200" class="star1">
+          <img src="./assets/images/projects_star.svg" alt="반짝">
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="star2">
+          <img src="./assets/images/projects_star.svg" alt="반짝">
+        </div>
       </div>
     </div>
     <!-- 프로젝트 소개 -->
     <div class="projects_work">
-      <ul class="work_list">
-        <li class="mfunch">
-          <a href="#" class="flex">
-            <h4 class="project_name flex"><img src="./assets/images/skills_star.svg" alt="반짝">m.funch</h4>
-            <div class="flex project_date">
-              <p>2023.10-2023.11</p>
-              <p>Team Project' Web Publishing</p>
-            </div>
-          </a>
-        </li>
-        <li class="singsinggo">
-          <a href="#" class="flex">
-            <h4 class="project_name flex"><img src="./assets/images/skills_star.svg" alt="반짝">싱싱고</h4>
+      <div class="work_list">
+        <div class="line line1" id="line"></div>
+        <div class="singsinggo list">
+          <a href="./sub/singsinggo/singsinggo.html" class="flex">
+            <h4 class="project_name sing flex"><img src="./assets/images/skills_star.svg" alt="반짝">싱싱고</h4>
             <div class="flex project_date">
               <p>2023.11-2023.12</p>
               <p>Team Project' Web App</p>
             </div>
           </a>
-        </li>
-        <li class="none">
+        </div>
+        <div class="line line2" id="line"></div>
+        <div class="mfunch list">
+          <a href="./sub/mfunch/mfunch.html" class="flex">
+            <h4 class="project_name mfunch flex"><img src="./assets/images/skills_star.svg" alt="반짝">m.funch</h4>
+            <div class="flex project_date">
+              <p>2023.10-2023.11</p>
+              <p>Team Project' Web Publishing</p>
+            </div>
+          </a>
+        </div>
+        <div class="line line3" id="line"></div>
+        <div class="none1 list">
           <a href="#" class="flex">
-            <h4 class="project_name flex"><img src="./assets/images/skills_star.svg" alt="반짝">comming soon</h4>
+            <h4 class="project_name none1 flex"><img src="./assets/images/skills_star.svg" alt="반짝">comming soon</h4>
             <div class="flex project_date">
               <p>2023.12-2023.01</p>
               <p>Redesign' Web Publishing</p>
             </div>
           </a>
-        </li>
-        <li class="none">
+        </div>
+        <div class="line line4" id="line"></div>
+        <div class="none2 list">
           <a href="#" class="flex">
-            <h4 class="project_name flex"><img src="./assets/images/skills_star.svg" alt="반짝">comming soon</h4>
+            <h4 class="project_name none2 flex"><img src="./assets/images/skills_star.svg" alt="반짝">comming soon</h4>
             <div class="flex project_date">
               <p>2023.12-2023.01</p>
               <p>Redesign' Web Publishing</p>
             </div>
           </a>
-        </li>
-        <li class="portfolio">
+        </div>
+        <div class="line line5" id="line"></div>
+        <div class="portfolio list">
           <a href="#" class="flex">
-            <h4 class="project_name flex"><img src="./assets/images/skills_star.svg" alt="반짝">My Portfolio</h4>
+            <h4 class="project_name portfolio flex"><img src="./assets/images/skills_star.svg" alt="반짝">My Portfolio
+            </h4>
             <div class="flex project_date">
               <p>2023.12-2023.01</p>
               <p>My Portfolio Design' Web Publishing</p>
             </div>
           </a>
-        </li>
-      </ul>
+        </div>
+        <div class="line line6" id="line"></div>
+      </div>
     </div>
   </section>
   <!-- 콘텍트 -->
@@ -247,7 +263,7 @@
     </div>
     <div class="contact_github">
       <div class="cherry_wrap flex">
-        <a href="#" class="cherry_left">
+        <a href="https://github.com/sol227/portfolio.git" class="cherry_left">
           <img src="./assets/images/contact_cherryL.svg" alt="체리1">
           <p>Portfolio<br>작업일지</p>
         </a>
@@ -264,7 +280,6 @@
     </div>
     <div class="address flex">
       wjdgkthf35@naver.com
-      <a href="#">Instagram</a>
     </div>
   </section>
   <!-- 푸터 -->
@@ -273,8 +288,10 @@
       <span class="material-symbols-outlined">
         arrow_upward
       </span>
+    </a>
   </footer>
   <div class="noise"></div>
+  <div class="cursor"></div>
 
 
   <!-- jQuary -->
@@ -287,6 +304,10 @@
   <!-- gsap 플러그인 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
     integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- 스크롤트리거 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+    integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- 스크롤투 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"
