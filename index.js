@@ -1,46 +1,32 @@
 // 메뉴 스크롤
 gsap.registerPlugin(ScrollToPlugin);
 
-// 현재 페이지의 앵커(해시)인지 확인하는 함수
 function getSamePageAnchor(link) {
-  // 주어진 링크의 프로토콜, 호스트, 경로, 쿼리 문자열이 현재 페이지와 동일한지 확인
   if (
     link.protocol !== window.location.protocol ||
     link.host !== window.location.host ||
     link.pathname !== window.location.pathname ||
     link.search !== window.location.search
   ) {
-    return false; // 동일하지 않으면 false 반환
+    return false;
   }
 
-  return link.hash; // 동일하다면 앵커 반환
+  return link.hash;
 }
 
-// 주어진 해시(앵커)로 스크롤을 이동시키는 함수
 function scrollToHash(hash, e) {
   const elem = hash ? document.querySelector(hash) : false;
   if (elem) {
-    if (e) e.preventDefault(); // 이벤트가 존재하면 기본 동작 막기
-    gsap.to(window, { scrollTo: elem }); // gsap을 사용하여 부드러운 스크롤 효과 적용
+    if (e) e.preventDefault();
+    gsap.to(window, { scrollTo: elem });
   }
 }
-// 링크 클릭 시 현재 페이지 내의 앵커로 스크롤 이동
 document.querySelectorAll("a[href]").forEach((a) => {
   a.addEventListener("click", (e) => {
     scrollToHash(getSamePageAnchor(a), e);
   });
 });
-// 로드 시 URL의 해시(앵커)로 스크롤 이동
 scrollToHash(window.location.hash);
-
-// 마우스 커서
-const cursor = document.querySelector(".cursor");
-
-window.addEventListener("mousemove", (e) => {
-  console.log(e);
-  cursor.style.left = e.pageX + "px";
-  cursor.style.top = e.pageY + "px";
-});
 
 // sol_intro 색칠
 const svg = document.getElementById("drawingArea");
@@ -174,7 +160,7 @@ gsap.to(".line6", {
 
 const singsinggo = document.querySelector(".singsinggo");
 const mfunch = document.querySelector(".mfunch");
-const none1 = document.querySelector(".none1");
+const none1 = document.querySelector(".lush");
 const none2 = document.querySelector(".none2");
 const portfolio = document.querySelector(".portfolio");
 const workList = document.querySelector(".work_list");
@@ -188,17 +174,19 @@ function restoreBackgroundColor(element) {
 }
 
 // 마우스 이미지
-const customCursor = document.getElementById("customCursor");
 
-document.addEventListener("mousemove", (event) => {
-  customCursor.style.left = `${event.clientX}px`;
-  customCursor.style.top = `${event.clientY}px`;
-});
+// const cursor = document.getElementById("customCursor");
+
+// window.addEventListener("mousemove", (e) => {
+//   console.log(e);
+//   cursor.style.left = e.pageX + "px";
+//   cursor.style.top = e.pageY + "px";
+// });
 
 // singsinggo
 singsinggo.addEventListener("mouseover", function () {
   changeBackgroundColor(workList, "#00C8F4");
-  customCursor.style.backgroundImage = "url('./assets/images/sing_mouse.svg')";
+  customCursor.style.backgroundImage = "url('./assets/images/sing_mouse3.png')";
 });
 singsinggo.addEventListener("mouseout", function () {
   restoreBackgroundColor(workList);
@@ -216,7 +204,7 @@ mfunch.addEventListener("mouseout", function () {
 });
 // none
 none1.addEventListener("mouseover", function () {
-  changeBackgroundColor(workList, "#80F1A2");
+  changeBackgroundColor(workList, "#d9ff42");
   customCursor.style.backgroundImage =
     "url('./assets/images/mfunch_mouse.svg')";
 });
@@ -244,6 +232,17 @@ portfolio.addEventListener("mouseout", function () {
   restoreBackgroundColor(workList);
   customCursor.style.backgroundImage = "";
 });
+
+// scrollSmoder lenis
+const lenis = new Lenis();
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
 
 // const intro = document.querySelector(".sol");
 // const canvas = document.getElementById("canvas");
