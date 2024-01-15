@@ -1,0 +1,43 @@
+/* common */
+
+/* 스크롤 */
+html.lenis {
+  /* height: auto; */
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  font-family: "SUIT", -apple-system, BlinkMacSystemFont, "Malgun Gothic",
+    "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  width: 6px;
+  height: 20%;
+  background-color: #31af57;
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+
+main {
+  /* margin: 0 auto; */
+  width: 80vw;
+  min-width: 1100px;
+  max-width: 1500px;
+}
+.color {
+  color: #31af57;
+}
+.bold {
+  font-weight: 600;
+}
+.flex {
+  display: flex;
+}
