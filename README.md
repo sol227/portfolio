@@ -32,7 +32,7 @@
 
 #### 240103
 
-- html / css - 싱싱고, mfunch 상세페이지 작업 (문제 해결 / 이미지 추가 + 보고서 pdf 연결)
+- html / css - 싱싱고, mfunch 상세페이지 작업 (문제 해결 / 이미지 추가 + 보고서 pdf 연결)  
   -&gt; 디자인 시안에 맞게 전체적으로 border 값을 주어 섹션을 나누기 위해 &lt;body&gt;에 width 값을 지정했으나,
   &lt;section&gt; width 값이랑 오차가 생겨 &lt;main&gt; 태그로 한번 더 감싸 해결
 - html - github / 상세페이지 / 싱싱고, mfunch 등 연결할 링크 추가
