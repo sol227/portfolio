@@ -25,10 +25,8 @@ body::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
 
-
 main {
-  /* margin: 0 auto; */
-  width: 80vw;
+  width: 100vw;
   min-width: 1100px;
   max-width: 1500px;
 }
@@ -40,4 +38,59 @@ main {
 }
 .flex {
   display: flex;
+}
+
+/* noise 효과 */
+.noise {
+  z-index: -100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif")
+    0 0 / auto;
+  opacity: 0.05;
+}
+
+/* logo */
+.header {
+  width: 100%;
+  border-bottom: 1px solid #000;
+}
+.logo {
+  width: 100%;
+}
+.logo img {
+  width: 45px;
+  transition: 1s;
+  padding: 12px;
+  margin-left: 28px;
+}
+.logo:hover img {
+  transform: rotate(360deg);
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.footer .top_btn .material-symbols-outlined {
+  color: #31af57;
+  font-size: 2.3rem;
+  position: absolute;
+  bottom: 35px;
+  right: 50px;
+  text-align: center;
+  padding: 4px 13px;
+  border: #000 1px solid;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.2s;
+}
+.footer .top_btn:hover .material-symbols-outlined {
+  color: #fff;
+  background-color: #000;
 }
