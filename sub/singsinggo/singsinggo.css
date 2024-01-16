@@ -13,6 +13,14 @@
 }
 
 /* common */
+body {
+  font-size: 1.1rem;
+}
+
+.color {
+  color: #00bbf4;
+}
+
 .pretendard {
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
@@ -22,57 +30,7 @@
 .soyo {
   font-family: "SOYOMapleBoldTTF";
 }
-/**** footer ****/
-.footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-}
-.footer .top_btn .material-symbols-outlined {
-  color: #31af57;
-  font-size: 2.3rem;
-  position: absolute;
-  bottom: 35px;
-  right: 50px;
-  text-align: center;
-  padding: 4px 13px;
-  border: #000 1px solid;
-  border-radius: 50%;
-  background-color: #fff;
-  transition: 0.2s;
-}
-.footer .top_btn:hover .material-symbols-outlined {
-  color: #fff;
-  background-color: #000;
-}
-/* noise 효과 */
-.noise {
-  z-index: -100;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url("https://i.ibb.co/x3TCktM/645cbb8ec449398255b76326-noise.gif")
-    0 0 / auto;
-  opacity: 0.05;
-}
 
-/* logo*/
-.logo {
-  width: 100%;
-  height: 70px;
-  border-bottom: 1px solid #000;
-}
-.logo img {
-  width: 45px;
-  transition: 1s;
-  padding: 12px;
-  margin-left: 28px;
-}
-.logo:hover img {
-  transform: rotate(360deg);
-}
 /* about */
 .about {
   width: 500px;
@@ -83,7 +41,7 @@
   top: 0;
   left: 0;
   background-color: #0000001c;
-  /* margin-left: 100px; */
+  z-index: 10;
 }
 .about .about_wrap {
   height: 55%;
@@ -101,7 +59,7 @@
 }
 .about .about_wrap .title h3 {
   font-size: 2.7rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .about .about_wrap .introduce,
 .about .about_wrap .tag_date {
@@ -116,7 +74,6 @@
 }
 .about .cloud_bg {
   width: 400px;
-  /* height: 70px; */
 }
 .about .cloud_bg a {
   position: absolute;
@@ -165,7 +122,7 @@
   transition: 0.3s;
 }
 .about .tool_report .report .report_wrap p a:hover {
-  color: #31af57;
+  color: #00bbf4;
 }
 .about .tool_report .report .report_wrap p a .material-symbols-outlined {
   transform: rotate(45deg);
@@ -173,12 +130,13 @@
 
 /* main */
 .main {
-  z-index: -10;
-  width: calc(80vw - 500px);
-  min-width: 1000px;
+  z-index: 0;
+  width: calc(100vw - 500px);
+  min-width: 1200px;
   padding-bottom: 100px;
   border-right: 1px solid #000;
   overflow: hidden;
+  mix-blend-mode: multiply;
 }
 .main .main_img {
   width: 100%;
@@ -202,16 +160,20 @@
   content: "";
   width: 180px;
   height: 2px;
-  background-color: #31af57;
+  background-color: #00bbf4;
   position: absolute;
   top: 38px;
   display: none;
 }
-.main .category_title:hover {
-}
+
 /* 소개 */
+.main .info {
+  padding: 150px;
+  border-bottom: 1px solid #000;
+}
+
 .main .overview {
-  padding: 100px 100px 0;
+  padding-bottom: 100px;
   box-sizing: border-box;
 }
 /* .main .overview .category_title {
@@ -223,12 +185,9 @@
 }
 /* 담당업무 */
 .main .part {
-  padding: 100px;
+  padding-bottom: 100px;
 }
-.main .part .category_title {
-  /* width: 150px; */
-  /* padding-right: 150px; */
-}
+
 .main .part .part_wrap {
   width: 100%;
   justify-content: flex-start;
@@ -237,18 +196,21 @@
 }
 .main .part .part_wrap li {
   width: 170px;
-  border: 1px solid #31af57;
+  border: 1px solid #00bbf4;
   border-radius: 40px;
   padding: 10px 30px;
   box-sizing: border-box;
   text-align: center;
   line-height: 1.4;
+  transition: 0.3s;
+}
+.main .part .part_wrap li:hover {
+  color: #fff;
+  background-color: #00bbf4;
 }
 /* 작업 순서 */
 .main .time_line {
   width: 100%;
-  padding: 0 100px 100px;
-  border-bottom: 1px solid #000;
   box-sizing: border-box;
 }
 .main .time_line .category_title {
@@ -260,7 +222,7 @@
 }
 /* 스타일 가이드 */
 .main .style_guide {
-  padding: 100px;
+  padding: 150px;
   border-bottom: 1px solid #000;
 }
 .main .style_guide .category_title {
@@ -363,11 +325,11 @@
 }
 .main .problem .problem_wrap .problem_list {
   list-style: circle;
-  line-height: 1.6;
+  line-height: 2.1;
   padding-left: 18px;
 }
 .main .problem .problem_wrap .problem_list li {
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 
 /* 리뷰 */
@@ -379,7 +341,7 @@
 }
 .main .review .review_wrap .review_list {
   list-style: circle;
-  line-height: 1.6;
+  line-height: 2.1;
   padding: 0 0 60px 18px;
   word-break: keep-all;
 }

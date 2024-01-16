@@ -3,25 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>sol' portfolio</title>
+  <title>sol' portfolio - singsinggo</title>
 
   <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="72x72" href="../../favicon/apple-icon-72x72.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="../../favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/sol_favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/sol_favicon.png">
   <link rel="manifest" href="../../favicon/manifest.json">
-
   <!-- 노이즈 효과 -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-
   <!-- 구글 아이콘 -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
   <!-- font -->
   <link href="https://webfontworld.github.io/sunn/SUIT.css" rel="stylesheet">
-
   <!-- css -->
   <!-- jQuary -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -33,7 +27,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <h1 class="logo back_btn">
       <!-- <span class="navbar"></span> -->
       <a href="../../index.html" class="btn">
@@ -95,7 +89,7 @@
         <div class="main_img">
           <img src="./images/singsinggo_img.png" alt="싱싱고 이미지">
         </div>
-        <div>
+        <div class="info">
           <div data-aos="fade-up" class="overview flex">
             <h4 class="category_title">Overview</h4>
             <p>
@@ -186,6 +180,24 @@
             <li data-aos="fade-up" class="success">
               <h5 class="sub_category_title">Success :)</h5>
               <ul class="problem_list">
+                <li data-aos="fade-up" class="failure">
+                  <h5 class="sub_category_title">Failure :(</h5>
+                  <ul class="problem_list">
+                    <li>
+                      table로 캘린더를 직접 만들어서 저장된 데이터를 가져오려고 시도 했으나 실패
+                      <div><span class="color bold">-></span> JS FullCalendar
+                        플러그인을 활용해 대체하였으나 CSS 작업의 한계가 있어 엉성한 레이아웃으로 완성
+                      </div>
+                    </li>
+                    <li>
+                      소비기한 디데이 임박 시 폰트 색상이 변경되는 기능을 if 문으로 구현하려 했지만 실패
+                      <div><span class="color bold">-></span> css 우선순위도
+                        확인해 보고, console을 통해 받아오는 데이터도 확인했지만 결국 원인을 찾지 못해 해결
+                        실패
+                      </div>
+                    </li>
+                  </ul>
+                </li>
                 <li>
                   보관 중인 식재료 목록을 새로고침 하면 등록했던 데이터가 초기화되는 문제 발생 <div><span class="color bold">-></span> 로컬스토리지에
                     데이터를 저장하여 성공!</div>
@@ -208,43 +220,25 @@
                 </li>
               </ul>
             </li>
-            <li data-aos="fade-up" class="failure">
-              <h5 class="sub_category_title">Failure :(</h5>
-              <ul class="problem_list">
-                <li>
-                  table로 캘린더를 직접 만들어서 저장된 데이터를 가져오려고 시도 했으나 실패
-                  <div><span class="color bold">-></span> JS FullCalendar
-                    플러그인을 활용해 대체하였으나 CSS 작업의 한계가 있어 엉성한 레이아웃으로 완성
-                  </div>
-                </li>
-                <li>
-                  소비기한 디데이 임박 시 폰트 색상이 변경되는 기능을 if 문으로 구현하려 했지만 실패
-                  <div><span class="color bold">-></span> css 우선순위도
-                    확인해 보고, console을 통해 받아오는 데이터도 확인했지만 결국 원인을 찾지 못해 해결
-                    실패
-                  </div>
-                </li>
-              </ul>
-            </li>
           </ul>
         </div>
         <div data-aos="fade-up" class="review">
           <h4 class="category_title">Review</h4>
           <ul class="review_wrap">
-            <li data-aos="fade-up" class="good">
-              <h5 class="sub_category_title">Good</h5>
-              <ul class="review_list">
-                <li>팀원들끼리 역할 분담이 적절하게 이뤄지면서 서로의 부족한 부분을 채워줌</li>
-                <li>진행 과정에서 막히거나 오류가 발생했을 때 서로 의견을 나누며 해결해 나아감</li>
-                <li>계획했던 기능의 대부분을 구현하고, 안정감있는 UI 디자인을 한 점</li>
-              </ul>
-            </li>
             <li data-aos="fade-up" class="bad">
               <h5 class="sub_category_title">Bad</h5>
               <ul class="review_list">
                 <li>기능 구현은 했지만 데이터 저장을 로컬로 대체하면서 테이터 관리에 아쉬움이 남음</li>
                 <li>식재료 목록에서 수정을 해도 데이터 업데이트가 안 되는 문제로 부분별로 나눴던 컴포넌트를 합치게 된 점이 매우 아쉬움</li>
                 <li>캘린더 플러그인을 사용하면서 플러그인의 기본 성격이 있어 CSS 수정에 한계가 있었음</li>
+              </ul>
+            </li>
+            <li data-aos="fade-up" class="good">
+              <h5 class="sub_category_title">Good</h5>
+              <ul class="review_list">
+                <li>팀원들끼리 역할 분담이 적절하게 이뤄지면서 서로의 부족한 부분을 채워줌</li>
+                <li>진행 과정에서 막히거나 오류가 발생했을 때 서로 의견을 나누며 해결해 나아감</li>
+                <li>계획했던 기능의 대부분을 구현하고, 안정감있는 UI 디자인을 한 점</li>
               </ul>
             </li>
             <li data-aos="fade-up" class="takeaway">
