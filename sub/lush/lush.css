@@ -1,0 +1,376 @@
+@charset "utf-8";
+/* 수트 폰트 font-family: 'SUIT'; */
+@import url("https://webfontworld.github.io/sunn/SUIT.css");
+/*    font-family: 'Lush'; */
+@font-face {
+  font-family: "Lush";
+  src: url("Lush.ttf.woff") format("woff"),
+    url("Lush.ttf.svg#Lush") format("svg"), url("Lush.ttf.eot"),
+    url("Lush.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-size: 1.1rem;
+}
+
+.color {
+  color: #8000ff;
+}
+
+.lush {
+  font-family: "Lush", Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+}
+
+/* about */
+.about {
+  /* width: 30%; */
+  width: 500px;
+  height: 100vh;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #0000001c;
+  /* margin-left: 100px; */
+  z-index: 10;
+}
+.about .about_wrap {
+  height: 55%;
+  border-bottom: 1px solid #000;
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+.about .about_wrap .title {
+  line-height: 1.5;
+  padding-bottom: 25px;
+}
+.about .about_wrap .title h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.about .about_wrap .title h3 {
+  font-size: 2.7rem;
+  font-weight: 900;
+}
+.about .about_wrap .introduce,
+.about .about_wrap .tag_date {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-bottom: 50px;
+  word-break: keep-all;
+}
+.about .about_wrap .tag_date {
+  font-size: 1.1rem;
+}
+.about .cloud_bg {
+  width: 400px;
+}
+.about .cloud_bg a {
+  position: absolute;
+  bottom: 39%;
+  left: 35%;
+  width: 350px;
+  height: 120px;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 7;
+  /* padding-left: 135px; */
+  background: url(./images/sub_page.svg) no-repeat 50% / 260px;
+  transition: 0.3s;
+}
+.about .cloud_bg:hover a {
+  transform: scale(1.1);
+}
+/* 툴, 보고서 */
+.about .tool_report {
+  padding: 50px 50px 0;
+}
+.about .tool_report h4 {
+  font-size: 1rem;
+  padding: 60px 0 20px;
+}
+.about .tool_report .tool {
+  font-size: 1rem;
+  padding-top: 30px;
+}
+.about .tool_report .tool_imgWrap {
+  justify-content: flex-start;
+  gap: 20px;
+}
+.about .tool_report .tool_imgWrap img {
+  width: 80px;
+}
+.about .tool_report .report .report_wrap {
+  /* width: 120px; */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.about .tool_report .report .report_wrap p a {
+  width: 150px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.about .tool_report .report .report_wrap p a:hover {
+  color: #8000ff;
+}
+.about .tool_report .report .report_wrap p a .material-symbols-outlined {
+  transform: rotate(45deg);
+}
+
+/* main */
+.main {
+  z-index: 0;
+  /* width: 70%; */
+  width: calc(100vw - 502px);
+  min-width: 1200px;
+  padding-bottom: 100px;
+  border-right: 1px solid #000;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+.main .main_img {
+  width: 100%;
+  height: 100vh;
+  background-color: #d9ff42;
+  justify-content: center;
+  align-items: center;
+  z-index: -10;
+  mix-blend-mode: multiply;
+}
+.main .main_img video {
+  width: 1100px;
+  object-fit: contain;
+  border-radius: 30px;
+}
+.main .category_title {
+  width: 250px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-right: 100px;
+  box-sizing: border-box;
+  position: relative;
+}
+.main .category_title::before {
+  content: "";
+  width: 180px;
+  height: 2px;
+  background-color: #8000ff;
+  position: absolute;
+  top: 38px;
+  display: none;
+}
+/* 소개 */
+.main .info {
+  padding: 150px;
+  border-bottom: 1px solid #000;
+}
+.main .overview {
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+/* .main .overview .category_title {
+  padding-right: 100px;
+} */
+.main .overview p {
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* 작업 순서 */
+.main .time_line {
+  width: 100%;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+.main .time_line .category_title {
+  width: 215px;
+}
+.main .time_line .timeline_list {
+  list-style: circle;
+  line-height: 2.1;
+}
+/* gsap 공부 */
+.main .study {
+  width: 100%;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+.main .study .category_title {
+  width: 215px;
+}
+.main .study .study_list {
+  list-style: circle;
+  line-height: 2.1;
+}
+
+/* 스타일 가이드 */
+
+.main .style_guide {
+  padding: 150px;
+  border-bottom: 1px solid #000;
+}
+.main .style_guide .category_title {
+  padding-bottom: 80px;
+}
+.main .sub_category_title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 50px;
+}
+
+.main .style_guide .style_list {
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.main .style_guide .style_list li {
+  width: 350px;
+  word-break: keep-all;
+}
+.main .style_guide .style_list .concept {
+  width: 100%;
+}
+.main .style_guide .style_list .concept .concept_tag {
+  /* width: 500px; */
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+}
+.main .style_guide .style_list .concept .concept_txt .concept_info {
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+.main .style_guide .style_list .concept .concept_txt .concept_tag li {
+  width: 160px;
+  border: 1px solid #8000ff;
+  border-radius: 40px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.4;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.main .style_guide .style_list .concept .concept_txt .concept_tag li:hover {
+  background-color: #8000ff;
+  color: #fff;
+}
+.main .style_guide .style_list .keyword {
+  width: 230px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.main .style_guide .style_list .color_palette {
+  width: 380px;
+  line-height: 1.6;
+  justify-content: space-between;
+}
+.main .style_guide .style_list .color_palette p {
+  padding-bottom: 20px;
+}
+.main .style_guide .style_list .color_palette .color_list {
+  width: 350px;
+  justify-content: space-between;
+}
+.main .style_guide .style_list .color_palette .color_list img {
+  width: 70px;
+}
+.main .style_guide .style_list .fonts {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.main .style_guide .style_list .fonts .font_wrap .font {
+  justify-content: flex-start;
+  gap: 80px;
+}
+.main .style_guide .style_list .fonts .font_wrap .pretendard {
+}
+.main .style_guide .style_list .fonts .font_wrap .main_font,
+.main .style_guide .style_list .fonts .font_wrap .point_font {
+  width: 230px;
+}
+.main .style_guide .style_list .fonts .font_wrap .pretendard {
+  font-size: 1.1rem;
+}
+.main .style_guide .style_list .fonts .font_wrap .soyo {
+  font-size: 1rem;
+}
+.main .style_guide .style_list .font_size .fontSize_wrap li {
+  width: 750px;
+  line-height: 2;
+}
+.main .style_guide .style_list .font_size .fontSize_wrap li p:nth-child(1) {
+  width: 500px;
+}
+.lush_title,
+.lush_sub,
+.suit_title,
+.suit_subTitle,
+.suit_basic {
+  justify-content: space-between;
+}
+.lush_title {
+  font-size: 4rem;
+}
+.lush_sub {
+  font-size: 2.4rem;
+}
+.suit_title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.suit_subTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.suit_basic {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* 문제 해결 */
+.main .problem {
+  padding: 150px 100px 100px;
+}
+.main .problem .category_title {
+  width: 400px;
+  padding-bottom: 50px;
+}
+.main .problem .problem_wrap li:nth-child(1) {
+  padding-bottom: 60px;
+}
+.main .problem .problem_wrap .problem_list {
+  list-style: circle;
+  line-height: 2.1;
+  padding-left: 18px;
+}
+.main .problem .problem_wrap .problem_list li {
+  padding-bottom: 30px;
+}
+
+/* 리뷰 */
+.main .review {
+  padding: 0 100px 100px;
+}
+.main .review .category_title {
+  padding: 0 100px 80px 0;
+}
+.main .review .review_wrap .review_list {
+  list-style: circle;
+  line-height: 2.1;
+  padding: 0 0 60px 18px;
+  word-break: keep-all;
+}
