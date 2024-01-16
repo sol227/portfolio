@@ -3,37 +3,31 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>sol' portfolio</title>
-  <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="72x72" href="../../favicon/apple-icon-72x72.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="../../favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-  <link rel="manifest" href="../../favicon/manifest.json">
+  <title>sol' portfolio - m.funch</title>
 
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/sol_favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/sol_favicon.png">
+  <link rel="manifest" href="../../favicon/manifest.json">
   <!-- 노이즈 효과 -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-
   <!-- 구글 아이콘 -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
   <!-- font -->
   <link href="https://webfontworld.github.io/sunn/SUIT.css" rel="stylesheet">
-
   <!-- css -->
   <!-- jQuary -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- reset -->
   <link rel="stylesheet" href="../../reset.css">
-
   <!-- style -->
   <link rel="stylesheet" href="../common/subCommon.css">
   <link rel="stylesheet" href="./mfunch.css">
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <h1 class="logo back_btn">
       <!-- <span class="navbar"></span> -->
       <a href="../../index.html" class="btn">
@@ -99,10 +93,10 @@
         </div>
       </section>
       <section class="main">
-        <div class="main_img">
-          <img src="./images/mfunch_img.png" alt="mfunch 이미지">
+        <div class="main_img flex">
+          <video src="./images/mfunch_video.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
         </div>
-        <div>
+        <div class="info">
           <div data-aos="fade-up" class="overview flex">
             <h4 class="category_title">Overview</h4>
             <p>
@@ -192,6 +186,16 @@
         <div data-aos="fade-up" class="problem">
           <h4 class="category_title">Problem Solving</h4>
           <ul class="problem_wrap">
+            <li data-aos="fade-up" class="failure">
+              <h5 class="sub_category_title">Failure :(</h5>
+              <ul class="problem_list">
+                <li>
+                  기존 사이트에서 가져온 svg에 GSAP MotionPath을 적용되지 않는 상황 발생
+                  <div><span class="color bold">-></span> 서브페이지 타이틀 모션은 이미지로, 메인 about 파트는 제작한 영상으로 대체
+                  </div>
+                </li>
+              </ul>
+            </li>
             <li data-aos="fade-up" class="success">
               <h5 class="sub_category_title">Success :)</h5>
               <ul class="problem_list">
@@ -217,30 +221,11 @@
                 </li>
               </ul>
             </li>
-            <li data-aos="fade-up" class="failure">
-              <h5 class="sub_category_title">Failure :(</h5>
-              <ul class="problem_list">
-                <li>
-                  기존 사이트에서 가져온 svg에 GSAP MotionPath을 적용되지 않는 상황 발생
-                  <div><span class="color bold">-></span> 서브페이지 타이틀 모션은 이미지로, 메인 about 파트는 제작한 영상으로 대체
-                  </div>
-                </li>
-              </ul>
-            </li>
           </ul>
         </div>
         <div data-aos="fade-up" class="review">
           <h4 class="category_title">Review</h4>
           <ul class="review_wrap">
-            <li data-aos="fade-up" class="good">
-              <h5 class="sub_category_title">Good</h5>
-              <ul class="review_list">
-                <li>걱정이 많았던 GSAP 플러그인을 적절하게 이용해 효과를 준 것 같음</li>
-                <li>디자인이나 레이아웃의 부분에서 심미적으로 보기 좋게 잘 만들어진 것 같음</li>
-                <li>Contact 페이지에서 어려워 보였던 JS를 기존 페이지와 동일하게 구현한 점</li>
-                <li>소통이 잘 된 편으로 각자 작업 후 꼭 피드백을 주고 받았고 어려운 문제가 있으면 함께 고민해서 해결함</li>
-              </ul>
-            </li>
             <li data-aos="fade-up" class="bad">
               <h5 class="sub_category_title">Bad</h5>
               <ul class="review_list">
@@ -249,6 +234,15 @@
                 <li>메인 about 파트에서 기존 사이트에서는 스크롤 브레이크가 걸리는 효과가 있으나 이번 프로젝트에서는 시간 관계상 구현하지 못한 것이 아쉬움</li>
                 <li>가이드라인을 정한다고 정했지만 각자 해오던 작업 스타일이 익숙하다보니 지켜지지 않는 부분이 많았음. 그래서 메인페이지 병합을 맡아서 하는 데 코드를 알아보기 어려워 시간이
                   오래걸렸던 기억이 남</li>
+              </ul>
+            </li>
+            <li data-aos="fade-up" class="good">
+              <h5 class="sub_category_title">Good</h5>
+              <ul class="review_list">
+                <li>걱정이 많았던 GSAP 플러그인을 적절하게 이용해 효과를 준 것 같음</li>
+                <li>디자인이나 레이아웃의 부분에서 심미적으로 보기 좋게 잘 만들어진 것 같음</li>
+                <li>Contact 페이지에서 어려워 보였던 JS를 기존 페이지와 동일하게 구현한 점</li>
+                <li>소통이 잘 된 편으로 각자 작업 후 꼭 피드백을 주고 받았고 어려운 문제가 있으면 함께 고민해서 해결함</li>
               </ul>
             </li>
             <li data-aos="fade-up" class="takeaway">
