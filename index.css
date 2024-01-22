@@ -2,6 +2,22 @@
 
 /* 수트 폰트 font-family: 'SUIT'; */
 @import url("https://webfontworld.github.io/sunn/SUIT.css");
+/*    font-family: 'Lush'; */
+@font-face {
+  font-family: "Lush";
+  src: url("Lush.ttf.woff") format("woff"),
+    url("Lush.ttf.svg#Lush") format("svg"), url("Lush.ttf.eot"),
+    url("Lush.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SOYOMapleBoldTTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 
 /* common */
 body {
@@ -79,7 +95,7 @@ html.lenis {
   z-index: 10;
   width: 100%;
   height: 70px;
-  background-color: #ffffffd2;
+  background-color: #ffffffc2;
   /* border-bottom: 1px solid #000; */
   position: fixed;
   top: 0;
@@ -491,6 +507,21 @@ html.lenis {
   font-weight: 500;
   /* padding-left: 10px; */
   transform: translateY(100px);
+}
+.projects .projects_work .work_list .list a .sing_font {
+  font-family: "SOYOMapleBoldTTF";
+  font-size: 2.15rem;
+  font-weight: 500;
+}
+.projects .projects_work .work_list .list a .lush_font {
+  font-family: "Lush";
+  font-size: 2rem;
+}
+.projects .projects_work .work_list .list a .pisces_font {
+  font-family: yeonnalligi-210, -apple-system, BlinkMacSystemFont,
+    "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-size: 2.15rem;
+  font-weight: 300;
 }
 .projects .projects_work .work_list .list a .project_name img {
   padding-right: 20px;

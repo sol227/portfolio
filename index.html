@@ -30,6 +30,18 @@
   <!-- style -->
   <link rel="stylesheet" href="./ani.css">
   <link rel="stylesheet" href="./index.css">
+
+  <!-- adobe font(pisces) -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'yzz1iae',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
 </head>
 
 <body id="target-element">
@@ -209,7 +221,7 @@
         <div class="line line1" id="line"></div>
         <div class="singsinggo list">
           <a href="./sub/singsinggo/singsinggo.html" class="flex">
-            <h4 class="project_name sing flex"><img src="./assets/images/skills_star.svg" alt="반짝">싱싱고</h4>
+            <h4 class="project_name sing flex sing_font"><img src="./assets/images/skills_star.svg" alt="반짝">싱싱고</h4>
             <div class="flex project_date">
               <p>2023.11-2023.12</p>
               <p>Team Project' Web App</p>
@@ -219,7 +231,7 @@
         <div class="line line2" id="line"></div>
         <div class="mfunch list">
           <a href="./sub/mfunch/mfunch.html" class="flex">
-            <h4 class="project_name mfunch flex"><img src="./assets/images/skills_star.svg" alt="반짝">m.funch</h4>
+            <h4 class="project_name mfunch flex"><img src="./assets/images/skills_star.svg" alt="반짝">M.FUNCH</h4>
             <div class="flex project_date">
               <p>2023.10-2023.11</p>
               <p>Team Project' Web Publishing</p>
@@ -229,7 +241,7 @@
         <div class="line line3" id="line"></div>
         <div class="lush list">
           <a href="./sub/lush/lush.html" class="flex">
-            <h4 class="project_name none1 flex"><img src="./assets/images/skills_star.svg" alt="반짝">LUSH</h4>
+            <h4 class="project_name none1 flex lush_font"><img src="./assets/images/skills_star.svg" alt="반짝">LUSH</h4>
             <div class="flex project_date">
               <p>2024.01.05-2023.01.16</p>
               <p>Redesign' Web Publishing</p>
@@ -239,7 +251,8 @@
         <div class="line line4" id="line"></div>
         <div class="none2 list">
           <a href="https://sol227.github.io/pisces/" class="flex">
-            <h4 class="project_name none2 flex"><img src="./assets/images/skills_star.svg" alt="반짝">물고기 Pisces</h4>
+            <h4 class="pisces_font project_name none2 flex"><img src="./assets/images/skills_star.svg" alt="반짝">물고기
+              Pisces</h4>
             <div class="flex project_date">
               <p>2024.01.17-2023.01.22</p>
               <p>Redesign' Web Publishing</p>
