@@ -214,7 +214,7 @@ none1.addEventListener("mouseout", function () {
 });
 // none
 none2.addEventListener("mouseover", function () {
-  changeBackgroundColor(workList, "#FFC450");
+  changeBackgroundColor(workList, "#e586dc");
   customCursor.style.backgroundImage =
     "url('./assets/images/mfunch_mouse.svg')";
 });
